@@ -18,13 +18,13 @@ struct pose_attitude{
     Vector3d gyr_bias;
 };
 
-Matrix3d X_ROT(double roll)
+Matrix3d xRotation(double roll)
 {
-    Matrix3d ROT;
-    ROT << 1,          0,         0,
-           0,  cos(roll), sin(roll),
-           0, -sin(roll), cos(roll);
-    return ROT;
+    Matrix3d rotation;
+    rotation << 1,           0,            0,
+                0,  cos(roll), sin(roll),
+                0, -sin(roll), cos(roll);
+    return rotation;
 }
 
 Matrix3d Y_ROT(double pitch)
